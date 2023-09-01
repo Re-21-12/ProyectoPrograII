@@ -1,13 +1,13 @@
 package proyecto_prograii;
 
 import java.util.*;
-
+import java.io.*;
 public class Principal {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException{
 		ArrayList<Silla> arreglo_sillas = new ArrayList<Silla>();
-		Double tesoreria = 0.0;
-		Inventario inventario = new Inventario(arreglo_sillas, tesoreria);
-		Fabrica_de_Sillas controlFabrica = new Fabrica_de_Sillas();
+			Inventario inventario = new Inventario(arreglo_sillas);
+			 
+		Procesos_Fabrica_de_Sillas procesos_fabrica_sillas= new Procesos_Fabrica_de_Sillas();
 
 		Scanner entrada = new Scanner(System.in);
 		System.out.println("Bienvenido a control de fabrica de sillas");
@@ -21,7 +21,7 @@ public class Principal {
 			switch (opcion) {
 			case "1":
 				System.out.println("Ha seleccionado Cargar Sillas");
-				controlFabrica.cargarSillas(inventario); // Corregido el nombre del método
+				procesos_fabrica_sillas.cargarSillas(inventario);
 				System.out.println("Presione ENTER");
 				entrada.nextLine();
 				System.out.println("Desea continuar?: [s] | [n] ");
@@ -29,7 +29,6 @@ public class Principal {
 				break;
 			case "2":
 				System.out.println("Ha seleccionado Revisar Inventario");
-				controlFabrica.revisarInventario();
 				System.out.println("Presione ENTER");
 				entrada.nextLine();
 				System.out.println("Desea continuar?: [s] | [n] ");
@@ -40,7 +39,6 @@ public class Principal {
 				System.out.println("Ha seleccionado Realizar Ordenes");
 				System.out.println("\n Para comprar: [c] \n Para venta: [v] ");
 				String orden = entrada.nextLine();
-				controlFabrica.realizarOrdenes(orden);
 				System.out.println("Presione ENTER");
 				entrada.nextLine();
 				System.out.println("Desea continuar?: [s] | [n] ");

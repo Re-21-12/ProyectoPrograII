@@ -1,67 +1,34 @@
 package proyecto_prograii;
 
-public class Material {
+public class Material extends Producto{
 //se usaran tipados en string que posteriormente seran convertidos para realizar las distintias operaciones
 	//cuanto quiero de cada cosa, establecer precios:
 	//double
-	private String pegamento;
-	//double 
-	private String barniz;
-	//int
-	private String madera;
-	//int
-	private String clavos;
-	//int
-	private String lija;
+	private Integer cantidad;
+
+	public Integer getCantidad() {
+		return cantidad;
+	}
+
+	public void setCantidad(Integer cantidad) {
+		this.cantidad = cantidad;
+	}
+
 	/**
-	 * @param pegamento
-	 * @param barniz
-	 * @param madera
-	 * @param clavos
-	 * @param lija
+	 * @param id
+	 * @param nombre
+	 * @param costo
+	 * @param cantidad
 	 */
-	public Material(String pegamento, String barniz, String madera, String clavos, String lija) {
-		super();
-		this.pegamento = pegamento;
-		this.barniz = barniz;
-		this.madera = madera;
-		this.clavos = clavos;
-		this.lija = lija;
+	public Material(String id, String nombre, Double costo, Integer cantidad) {
+		super(id, nombre, costo);
+		this.cantidad = cantidad;
 	}
-	public String getPegamento() {
-		return pegamento;
-	}
-	public void setPegamento(String pegamento) {
-		this.pegamento = pegamento;
-	}
-	public String getBarniz() {
-		return barniz;
-	}
-	public void setBarniz(String barniz) {
-		this.barniz = barniz;
-	}
-	public String getMadera() {
-		return madera;
-	}
-	public void setMadera(String madera) {
-		this.madera = madera;
-	}
-	public String getClavos() {
-		return clavos;
-	}
-	public void setClavos(String clavos) {
-		this.clavos = clavos;
-	}
-	public String getLija() {
-		return lija;
-	}
-	public void setLija(String lija) {
-		this.lija = lija;
-	}
+
 	@Override
 	public String toString() {
-		return "Material [pegamento=" + pegamento + ", barniz=" + barniz + ", madera=" + madera + ", clavos=" + clavos
-				+ ", lija=" + lija + "]";
+		return "Material [cantidad=" + cantidad + "]";
 	}
 	
+
 }

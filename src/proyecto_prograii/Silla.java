@@ -1,81 +1,64 @@
 package proyecto_prograii;
 
-public class Silla {
+import java.util.*;
+public class Silla extends Producto{
 //asi como en materiales tambien usuaremos string para posteriormente convertirlo
-	private Material material;
+	// private Material material;
 	// llevara un orden, para ver si se desea comprar materiales para la silla o
 	// vender la silla a precio de venta
-	private String orden;
-	private String tipoDeSilla;
+	// private String orden;
+	// private String tipoDeSilla;
 	// sera de tipo Int
-	private String cantidadDeSillas;
-	//double
-	private String costo;
-
-
-
-	/**
-	 * @param material
-	 * @param orden
-	 * @param tipoDeSilla
-	 * @param cantidadDeSillas
-	 * @param costo
+	// private String cantidadDeSillas;
+	// double
+	//= "174.91"
+	/*
+	 * si una persona en un dia hace mano de obra Q.3,323.60 + Q250 = 119.12
+	 * operador de maquina diario 357.36 Q por 3 dias pero en ese dia hace 10 sillas
+	 * 
+	 * precion de venta-> costo de la silla *
+	 * 
+	 * la silla se va a armar despues de ver el inventairo clase facturacion
+	 * 
+	 * mano de obra / total de sillas + iva = facturacion Por ejemplo: 0.25kg ->
+	 * Q27,06 = (cantidad_pegamento en kg * precio)/0.25kg -> 12.96 0.1250 * 27.00 =
+	 * 3.3825Q 0.9463kg -> Q75,00 = (cantidad_barniz en kg * precio)/0.9463kg = 39
+	 * Quetzales por 1/4 de barniz 3 pedazos de madera -> Q100 necesitamos 10 clavos
+	 * de una bolsa de 40 de 0.454clavos -> 2.25 Q 2 lijas 10Q
 	 */
-	public Silla(Material material, String orden, String tipoDeSilla, String cantidadDeSillas, String costo) {
-		super();
-		this.material = material;
-		this.orden = orden;
-		this.tipoDeSilla = tipoDeSilla;
-		this.cantidadDeSillas = cantidadDeSillas;
-		this.costo = costo;
+	// el precio de venta es : costo despues de cortar materiales + mano de obra =
+	// total *
+	private Double precio_venta ; //"195.90" <- precio de venta 
+	private ArrayList<Material> materiales;
+	public Double getPrecio_venta() {
+		return precio_venta;
 	}
-
-	public Material getMaterial() {
-		return material;
+	public void setPrecio_venta(Double precio_venta) {
+		this.precio_venta = precio_venta;
 	}
-
-	public void setMaterial(Material material) {
-		this.material = material;
+	public ArrayList<Material> getMateriales() {
+		return materiales;
 	}
-
-	public String getOrden() {
-		return orden;
+	public void setMateriales(ArrayList<Material> materiales) {
+		this.materiales = materiales;
 	}
-
-	public void setOrden(String orden) {
-		this.orden = orden;
+	/**
+	 * @param id
+	 * @param nombre
+	 * @param costo
+	 * @param precio_venta
+	 * @param materiales
+	 */
+	public Silla(String id, String nombre, Double costo, Double precio_venta, ArrayList<Material> materiales) {
+		super(id, nombre, costo);
+		this.precio_venta = precio_venta;
+		this.materiales = materiales;
 	}
-
-	public String getTipoDeSilla() {
-		return tipoDeSilla;
-	}
-
-	public void setTipoDeSilla(String tipoDeSilla) {
-		this.tipoDeSilla = tipoDeSilla;
-	}
-
-	public String getCantidadDeSillas() {
-		return cantidadDeSillas;
-	}
-
-	public void setCantidadDeSillas(String cantidadDeSillas) {
-		this.cantidadDeSillas = cantidadDeSillas;
-	}
-
-	public String getCosto() {
-		return costo;
-	}
-
-	public void setCosto(String costo) {
-		this.costo = costo;
-	}
-
 	@Override
 	public String toString() {
-		return "Silla [material=" + material + ", orden=" + orden + ", tipoDeSilla=" + tipoDeSilla
-				+ ", cantidadDeSillas=" + cantidadDeSillas + ", costo=" + costo + "]";
+		return "Silla [precio_venta=" + precio_venta + ", materiales=" + materiales + ", Id=" + getId()
+				+ ", Nombre_Producto=" + getNombre() + ", Costo=" + getCosto();
 	}
-
 
 
 }
