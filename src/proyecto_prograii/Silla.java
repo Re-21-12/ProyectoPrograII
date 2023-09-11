@@ -2,17 +2,7 @@ package proyecto_prograii;
 
 import java.util.*;
 public class Silla extends Producto{
-//asi como en materiales tambien usuaremos string para posteriormente convertirlo
-	// private Material material;
-	// llevara un orden, para ver si se desea comprar materiales para la silla o
-	// vender la silla a precio de venta
-	// private String orden;
-	// private String tipoDeSilla;
-	// sera de tipo Int
-	// private String cantidadDeSillas;
-	// double
-	//= "174.91"
-	/*
+/*
 	 * si una persona en un dia hace mano de obra Q.3,323.60 + Q250 = 119.12
 	 * operador de maquina diario 357.36 Q por 3 dias pero en ese dia hace 10 sillas
 	 * 
@@ -30,6 +20,7 @@ public class Silla extends Producto{
 	// total *
 	private Double precio_venta ; //"195.90" <- precio de venta 
 	private ArrayList<Material> materiales;
+	private Estado estado;
 	public Double getPrecio_venta() {
 		return precio_venta;
 	}
@@ -42,23 +33,30 @@ public class Silla extends Producto{
 	public void setMateriales(ArrayList<Material> materiales) {
 		this.materiales = materiales;
 	}
+	public Estado getEstado() {
+		return estado;
+	}
+	public void setEstado(Estado estado) {
+		this.estado = estado;
+	}
 	/**
 	 * @param id
 	 * @param nombre
 	 * @param costo
 	 * @param precio_venta
 	 * @param materiales
+	 * @param estado
 	 */
-	public Silla(String id, String nombre, Double costo, Double precio_venta, ArrayList<Material> materiales) {
+	public Silla(String id, String nombre, Double costo, Double precio_venta, ArrayList<Material> materiales,
+			Estado estado) {
 		super(id, nombre, costo);
 		this.precio_venta = precio_venta;
 		this.materiales = materiales;
+		this.estado = estado;
 	}
 	@Override
 	public String toString() {
-		return "Silla [precio_venta=" + precio_venta + ", materiales=" + materiales + ", Id=" + getId()
-				+ ", Nombre_Producto=" + getNombre() + ", Costo=" + getCosto();
+		return "Silla [precio_venta=" + precio_venta + ", materiales=" + materiales + ", estado=" + estado + "]";
 	}
-
 
 }

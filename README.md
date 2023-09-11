@@ -1,4 +1,6 @@
-# ProyectoPrograII Diagrama 
+# ProyectoPrograII Diagrama (Falta)
 trabajo de universidad de proyecto sobre programacion II
-
-![proyecto_progra](https://github.com/Re-21-12/ProyectoPrograII/assets/104967229/007b5a6c-7f20-495a-9aaa-0070f7204e2f)
+## Sin corregir
+![proyecto_progra](https://github.com/Re-21-12/ProyectoPrograII/assets/104967229/14ce983d-cb01-4e18-b127-37545b2dae8a)
+## Con correciones
+![proyecto_progra](https://github.com/Re-21-12/ProyectoPrograII/assets/104967229/10c7ba25-da66-48e8-b537-c6ff834d6ac2)

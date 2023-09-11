@@ -1,7 +1,7 @@
 package proyecto_prograii;
 import java.util.*;
 
-public class Distribuidor extends Institucion{
+public class Distribuidor extends Entidad{
 	private ArrayList<Silla> productos_distribuidos;
 	private String informacion_entrega;
 	public ArrayList<Silla> getProductos_distribuidos() {

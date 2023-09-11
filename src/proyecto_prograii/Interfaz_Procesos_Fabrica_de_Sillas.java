@@ -1,7 +1,6 @@
 package proyecto_prograii;
 import java.io.*;
 public interface Interfaz_Procesos_Fabrica_de_Sillas {
-public abstract void cargarSillas(Inventario inventario) throws IOException;
 public abstract void revisarInventario(Inventario inventario)throws IOException;
 public abstract void realizarCompraMaterial(Inventario inventario) throws IOException;
 public abstract void corteDeMateriales(Inventario inventario)throws IOException;

@@ -4,13 +4,13 @@ public class Material extends Producto{
 //se usaran tipados en string que posteriormente seran convertidos para realizar las distintias operaciones
 	//cuanto quiero de cada cosa, establecer precios:
 	//double
-	private Integer cantidad;
+	private Double cantidad;
 
-	public Integer getCantidad() {
+	public Double getCantidad() {
 		return cantidad;
 	}
 
-	public void setCantidad(Integer cantidad) {
+	public void setCantidad(Double cantidad) {
 		this.cantidad = cantidad;
 	}
 
@@ -20,7 +20,7 @@ public class Material extends Producto{
 	 * @param costo
 	 * @param cantidad
 	 */
-	public Material(String id, String nombre, Double costo, Integer cantidad) {
+	public Material(String id, String nombre, Double costo, Double cantidad) {
 		super(id, nombre, costo);
 		this.cantidad = cantidad;
 	}
@@ -29,6 +29,9 @@ public class Material extends Producto{
 	public String toString() {
 		return "Material [cantidad=" + cantidad + "]";
 	}
+
+
+
 	
 
 }
